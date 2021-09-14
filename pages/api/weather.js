@@ -19,7 +19,7 @@
 
 const url = (city) => `https://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${city}`;
 
-export default async function handler(req, res) {
+async function handler(req, res) {
 // Destructuring, immer Leerzeichen in geschw. Klammern
 // The req object represents the HTTP request and has properties
 // for the request query string, parameters, body, HTTP headers, and so on.
@@ -39,9 +39,10 @@ const { query: { city } } = req
     })
     .then((data) => res.status(200).json(data))
     .catch(() => res.status(400).json({message: 'Currently not avaliable'}))
-}
+};
 
 // Often we make a request to an API route with some data.
 // This is like posting your mail into the letterbox.
 // When the person receives and replies to the letter,
 // eventually the original sender will open the reply (response).
+module.exports = handler

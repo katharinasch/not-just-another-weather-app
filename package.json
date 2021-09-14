@@ -9,26 +9,41 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
+    "axios": "^0.21.4",
+    "cross-fetch": "^3.1.4",
     "cssnano": "^5.0.7",
-    "next": "11.0.1",
+    "next": "^11.1.2",
+    "node-fetch": "^3.0.0",
     "postcss-loader": "^6.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-search-autocomplete": "^5.4.2",
+    "regenerator-runtime": "^0.13.9",
     "sass-loader": "^12.1.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
     "autoprefixer": "^10.3.1",
+    "babel-jest": "^27.2.0",
     "babel-loader": "^8.2.2",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
     "jest": "^27.1.0",
+    "nock": "^13.1.3",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.7",
     "webpack-cli": "^4.7.2"

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 export const SearchBar = () => {
@@ -7,29 +7,6 @@ export const SearchBar = () => {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
   const [cityList, setCityList] = useState(null)
-
-  const items = [
-    {
-      id: 0,
-      name: 'Cobol'
-    },
-    {
-      id: 1,
-      name: 'JavaScript'
-    },
-    {
-      id: 2,
-      name: 'Basic'
-    },
-    {
-      id: 3,
-      name: 'PHP'
-    },
-    {
-      id: 4,
-      name: 'Java'
-    }
-  ]
 
 
   const handleOnSearch = (string, cityList) => {
@@ -77,6 +54,8 @@ export const SearchBar = () => {
     })
     .finally(setLoading(false))
   }
+
+  console.log(payload)
 
   const location = payload?.location?.name;
   const currentTemp = payload?.current?.temp_c;
