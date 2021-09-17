@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-export const ForecastButtons = ({city}) => {
+export const ForecastButtons = ({ city }) => {
   const [payload, setPayload] = useState(null)
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -31,7 +31,7 @@ export const ForecastButtons = ({city}) => {
   return(
     <div className="sm:col-span-2">
       <p className="block text-sm font-medium text-gray-700">Select forecast</p>
-        <button onClick={fetchCityData} className="mt-1 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        <button onClick={fetchCityData} className="mt-1 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" type='button'>
           Today
         </button>
         <p key={city?.location?.id} className='my-5'>

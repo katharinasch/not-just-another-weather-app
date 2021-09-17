@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 
 export default function Form() {
   const [city, setCity] = useState('')
+  
 
   return (
     <div className="bg-blue-200">
@@ -14,7 +15,7 @@ export default function Form() {
           <form action="#" method="POST" className="sm:grid-cols-2 sm:gap-x-8">
             
             <SearchBar city={city} setCity={setCity} />
-            <ForecastButtons city={city}/>
+            <ForecastButtons city={city} />
 
           </form>
       </div>

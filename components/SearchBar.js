@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
-export const SearchBar = ({city, setCity}) => {
-
+export const SearchBar = ({ city, setCity }) => {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
   const [cityList, setCityList] = useState(null)
@@ -30,8 +29,7 @@ export const SearchBar = ({city, setCity}) => {
   const allCities = cityList ? cityList : []
   const handleOnSelect = (item) => {
     const city = item?.name
-    setCity(city)
-    console.log(city)  
+    setCity(city)   
   }
 
   return(
