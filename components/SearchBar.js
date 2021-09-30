@@ -25,16 +25,15 @@ export const SearchBar = ({ city, setCity }) => {
       .finally(setLoading(false))
     }
   }
-
   const allCities = cityList ? cityList : []
   const handleOnSelect = (item) => {
-    const city = item?.name
-    setCity(city)   
+    const city = item?.name?.split(',')[0]
+    setCity(city)    
   }
 
   return(
     <div className="mb-6">
-      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+      <label htmlFor="city" className="block text-sm font-medium text-gray-700">
         Search city
       </label>
       <div className="grid grid-cols-5 gap-4">
